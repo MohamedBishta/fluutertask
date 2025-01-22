@@ -1,6 +1,7 @@
-import 'package:dartz/dartz.dart';
-import 'package:product_screen/domain/entities/product_entity/ProductEntity.dart';
+
+import '../../../data/model/products_response/ProductsModel.dart';
+
 
 abstract class ProductsRepo{
-  Future<Either<List<ProductEntity>,String>> getProducts();
+  Future<List<ProductsModel>> getProducts();
 }

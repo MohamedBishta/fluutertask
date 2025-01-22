@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
+import 'package:product_screen/data/model/products_response/ProductsModel.dart';
 
-import '../../domain/entities/product_entity/ProductEntity.dart';
 import '../../domain/usecase/product_use_case.dart';
 @injectable
 class ProductsViewModel extends Cubit<ProductsState>{
@@ -29,6 +29,6 @@ class ProductsErrorState extends ProductsState{
   ProductsErrorState(this.error);
 }
 class ProductsSuccessState extends ProductsState{
-  List<ProductEntity> products;
+  List<ProductsModel> products;
   ProductsSuccessState(this.products);
 }
